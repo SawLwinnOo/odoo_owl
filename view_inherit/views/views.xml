@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="employee_list_view_inherit" model="ir.ui.view">
+            <field name="name">employee.list.view.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">employee_list_views</attribute>
+                </xpath>
+            </field>
+        </record>
+        <record id="employee_kanban_view_inherit" model="ir.ui.view">
+            <field name="name">employee.kanban.view.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="js_class">employee_kanban_views</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
