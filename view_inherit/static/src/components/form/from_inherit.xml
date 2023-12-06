@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<template>
+    <t t-name="owl.EmployeeFormView" t-inherit="web.FormView" owl="1">
+        <xpath expr="//t[contains(@t-set-slot, 'layout-buttons')]" position="inside">
+            <button class="btn btn-primary" t-on-click="()=>this.openWebsite(model.root.data.work_email)">Go to Website</button>
+        </xpath>
+    </t>
+</template>

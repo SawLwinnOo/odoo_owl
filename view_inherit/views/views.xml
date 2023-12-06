@@ -20,6 +20,15 @@
                     <attribute name="js_class">employee_kanban_views</attribute>
                 </xpath>
             </field>
+        </record><record id="employee_form_view_inherit" model="ir.ui.view">
+            <field name="name">employee.kanban.view.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="js_class">employee_form_views</attribute>
+                </xpath>
+            </field>
         </record>
     </data>
 </odoo>
